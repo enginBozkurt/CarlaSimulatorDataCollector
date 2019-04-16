@@ -1,4 +1,4 @@
-# CarlaSimulatorDataCollector
+# Carla Simulator Data Collector
 Saving incoming camera sensor images  data as Numpy arrays for generate ground truth data for semantic segmentation.
 
 Task of finding lanes and other obstacles in our path can be greatly simplified by using a neural network capable of semantic segmentation,
