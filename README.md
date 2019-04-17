@@ -1,7 +1,7 @@
 # Carla Simulator Data Collector
 
 <P>
-This repo contains all the code for the self-driving project to generate ground truth data for semantic segmentation, 
+This repo contains all the code for the self-driving project to <b>generate ground truth data for semantic segmentation</b>, 
 which in turn makes it much easier to detect not only lanes but also other vehicles and objects in the camera feed, 
 and weather and lighting conditions, and a variety of vehicles and roads.
 </p>
@@ -198,3 +198,7 @@ Below the visualizations is the code I used to generate the images in this blog 
 Basically, I am converting the categorical semantic segmentation ground truth to RGB using a custom color mapping 
 function map_semseg_colors which outputs an RGB image that can then be saved using the pillow (PIL) library. 
 </p>
+
+
+## Some results of semantic segmentation grounds  matching the camera images from the collected data
+
