@@ -100,9 +100,9 @@ and then build algorithms on top of that. So we also want to get semantic segmen
 
 
 <p>
-Since I wanted to drive the car manually and collect data, I found it easiest to modify the `manual_control.py` file in the PythonClient directory. 
-The final version, `manual_control_rgb_semseg.py` is in this repository for this project. In order to figure out how to save data, 
-I referenced the client_example.py file in the PythonClient directory. But turns out, the technique used in that script to save the data is a little inefficient way.
+Since I wanted to drive the car manually and collect data, I found it easiest to modify the <b>manual_control.py</b> file in the PythonClient directory. 
+The final version, <b>manual_control_rgb_semseg.py</b> is in this repository for this project. In order to figure out how to save data, 
+I referenced the <b>client_example.py</b> file in the PythonClient directory. But turns out, the technique used in that script to save the data is a little inefficient way.
 They are saving each image (frame) to disk as a .png file as it is coming in. This is exactly how not to save data 
 when you want to keep up with a real-time task such as a running simulator, because writing to disk is a painfully slow process and 
 waiting for the Python client process to write to disk after each frame causes the framerate to drop to about 3-4 fps at best. 
@@ -138,11 +138,11 @@ uninterrupted gameplay, so overall framerate does not take a hit.
 </p>
 
 <p>
-If you take a look at the file buffered_saver.py, 
-you will find a BufferedImageSaver class which does all the magic. Each BufferedImageSaver object has a buffer (numpy array) 
+If you take a look at the file <b>buffered_saver.py</b> 
+you will find a <b>BufferedImageSaver</b> class which does all the magic. Each <b>BufferedImageSaver</b> object has a buffer (numpy array) 
 where it stores the incoming data. Since the numpy array is in memory (RAM), writing to it is very fast. 
 Each instance also stores the sensor type associated with it to determine what processing to apply to incoming data. 
-The BufferedImageSaver.process_by_type method takes in the raw data provided by the simulator each frame. 
+The <b>BufferedImageSaver.process_by_type</b> method takes in the raw data provided by the simulator each frame. 
 If the sensor is an RGB camera, it does not do anything. But if it is semantic segmentation ground truth, 
 then it removes all but the red channel, because it is the only channel with any information.
 If the sensor type happens to be a depth camera, it converts the information in the three channels into a single “channel” of 
