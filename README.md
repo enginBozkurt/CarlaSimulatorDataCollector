@@ -159,10 +159,10 @@ and then stores the incoming data.
 
 
 
-Verifying the Saved Data
+## Verifying the Saved Data
 
 <p>
-I have included a Jupyter Notebook called verify_collected_data.ipynb in the CARLA_simulator_scripts directory which will 
+I have included a Jupyter Notebook called <b>verify_collected_data.ipynb</b> in the CARLA_simulator_scripts directory which will 
 allow you to painlessly visualize the saved data.
 </p>
 
