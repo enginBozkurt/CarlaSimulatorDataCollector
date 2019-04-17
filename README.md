@@ -204,3 +204,5 @@ function map_semseg_colors which outputs an RGB image that can then be saved usi
 
 ![good_juxtaposed](https://user-images.githubusercontent.com/30608533/56298795-7a0abe80-613b-11e9-8140-ddcc280b5ae2.png)
 
+![good_juxtaposed](https://user-images.githubusercontent.com/30608533/56299177-2c428600-613c-11e9-93e4-adc6db9cbed8.png)
+
